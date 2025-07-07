@@ -29,6 +29,16 @@ body {
   }
 }
 
+.body-text{
+    font-family: georgia, serif;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 27px;
+    -webkit-font-smoothing: antialiased;
+    color: #231F20;
+    max-width: 636px;
+}
+
 main {
   display: block;
 }
@@ -399,4 +409,50 @@ footer.nav-bottom {
 }
 
 }
+
+// Public art list styles
+#public-art-list {
+  max-width: 636px;
+  justify-self: center;
+
+  figcaption{
+    font-weight: bold;
+    display:inline-block;
+    padding-left:0.3em;
+    padding-right:0.3em;
+    background-color: #f6d2dc;
+    color: black;
+  }
+
+  ol {
+    list-style: none;
+    counter-reset: item;
+
+    li {
+      counter-increment: item;
+      margin-bottom: 5px;
+
+      &::before {
+        content: counter(item);
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: #f6d2dc;
+        color: black;
+
+        width: 1.5em;
+        height: 1.5em;
+
+        font-weight: bold;
+        line-height: 1; // prevents vertical misalignment
+        margin-right: 10px;
+        vertical-align: middle;
+
+      }
+    }
+  }
+}
+
 
