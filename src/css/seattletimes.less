@@ -377,15 +377,25 @@ footer.nav-bottom {
   display: flex;
   align-items:center;
   padding-left:10%;
-  padding-right:10%;
+  padding-right:5%;
+  transform: translateX(0px);
 
 }
 
 .graphic-wrapper > img {
-    max-width:200%;
 
- @media (max-width: 500px) {
+ @media (min-width: 320px) {
   max-width:500%;
+}
+
+ @media (min-width: 641px) {
+  max-width:350%;
+}
+
+
+
+@media (min-width: 1025px) {
+  max-width:175%;
 }
 
 }
