@@ -19,14 +19,15 @@ guest.sendMessage({
 // This all needs to be in a function that recalculates all variables when window is resized
 function horizontalScroller(){
     //These vars help us determine how long our invisible scroll container needs to be for us to see the whole graphic on any screen
-  let windowWidth = window.innerWidth;
+  // let windowWidth = window.innerWidth;
   let horizontalSection = document.querySelector(".horizontal-section")
+  let wordpressWrapper = document.querySelector("custom-html.embed-container") // need this because WP wrapper isn't 100vw
 
   let distFromTop = horizontalSection.getBoundingClientRect().top + window.scrollY;
   let horizontalLength = document.querySelector(".graphic-wrapper").scrollWidth; //  how wide the graphic is
 
   // Dynamically calculate scroll distance based on viewport width (smaller screen width means you have to scroll more to see whole graphic. Must subtract windowWidth, otherwise the graphic will scroll all the way off the page and you'll see white. We want to stop when right edge of graphic reaches right edge of viewport.)
-  let scrollLength = (horizontalLength *1.05) - windowWidth // length of graphic
+  let scrollLength = (horizontalLength *1.05) - wordpressWrapper // length of graphic
   let scrollDistance = distFromTop +  scrollLength; // length from top + graphic 
   let scrollHeight = scrollLength + window.innerHeight;
 
