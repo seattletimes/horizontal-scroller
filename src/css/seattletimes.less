@@ -394,20 +394,24 @@ footer.nav-bottom {
 
 .graphic-wrapper > img {
 
- @media (min-width: 320px) {
-  max-width:500%;
+ @media (min-width: 200px) {
+  max-width:425%;
 }
 
  @media (min-width: 641px) {
-  max-width:350%;
-}
-
-@media (min-width: 1025px) {
   max-width:275%;
 }
 
-@media (min-width: 1281px) {
-  max-width:200%;
+@media (min-width: 1025px) {
+  max-width:250%;
+}
+
+@media (min-width: 1150px) {
+  max-width:225%;
+}
+
+@media (min-width: 1275px) {
+  max-width:165%;
 }
 
 @media (min-width: 1800px) {
@@ -419,12 +423,14 @@ footer.nav-bottom {
 #public-art-list {
   max-width: 636px;
   justify-self: center;
+  font-family: "ff-dagny-web-pro";
 
   figcaption{
     font-weight: bold;
     display:inline-block;
     padding-left:0.3em;
     padding-right:0.3em;
+    margin-bottom:0.5em;
     background-color: #e13f94;
     color: rgb(255, 255, 255);
   }
@@ -452,9 +458,13 @@ footer.nav-bottom {
         height: 1.5em;
 
         font-weight: bold;
-        line-height: 1; // prevents vertical misalignment
+        line-height: 1; 
         margin-right: 10px;
         vertical-align: middle;
+
+        @media (max-width: 380px){
+          margin-right:4px;
+        }
 
       }
     }
