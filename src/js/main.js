@@ -20,15 +20,17 @@ guest.sendMessage({
 function horizontalScroller(){
     //These vars help us determine how long our invisible scroll container needs to be for us to see the whole graphic on any screen
   let windowWidth = window.innerWidth;
+  let horizontalSection = document.querySelector(".horizontal-section")
+
+  let distFromTop = horizontalSection.getBoundingClientRect().top + window.scrollY;
   let horizontalLength = document.querySelector(".graphic-wrapper").scrollWidth; //  how wide the graphic is
-  let distFromTop = document.querySelector(".horizontal-section").offsetTop; // how far the horizontal section is from page top
 
   // Dynamically calculate scroll distance based on viewport width (smaller screen width means you have to scroll more to see whole graphic. Must subtract windowWidth, otherwise the graphic will scroll all the way off the page and you'll see white. We want to stop when right edge of graphic reaches right edge of viewport.)
   let scrollLength = (horizontalLength *1.05) - windowWidth // length of graphic
   let scrollDistance = distFromTop +  scrollLength; // length from top + graphic 
   let scrollHeight = scrollLength +window.innerHeight;
 
- document.querySelector(".horizontal-section").style.height = scrollHeight  +  "px" 
+  horizontalSection.style.height = scrollHeight  +  "px" 
 
   window.onscroll = function(){
   let scrollTop = window.pageYOffset
