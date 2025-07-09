@@ -21,7 +21,7 @@ function horizontalScroller(){
     //These vars help us determine how long our invisible scroll container needs to be for us to see the whole graphic on any screen
   // let windowWidth = window.innerWidth;
   let horizontalSection = document.querySelector(".horizontal-section")
-  let wordpressWrapper = document.querySelector("custom-html.embed-container") // need this because WP wrapper isn't 100vw
+  let wordpressWrapper = document.querySelector("sticky-wrapper") // need this because WP wrapper isn't 100vw. using sticky-wrapper as proxy for custom-html.embed-container div.
 
   let distFromTop = horizontalSection.getBoundingClientRect().top + window.scrollY;
   let horizontalLength = document.querySelector(".graphic-wrapper").scrollWidth; //  how wide the graphic is
