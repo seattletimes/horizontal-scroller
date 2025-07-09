@@ -23,14 +23,7 @@
   <body>
     <% if (json.project.production && !json.project.embedded) { %>
       <%= t.include("partials/_gtmNoScript.html") %>
-    <% } %>
-    
-    <section class="article-body">
-      <div class="article-content" style="margin:20%; margin-bottom:5%; margin-top:5%">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat, risus in ultricies convallis, metus massa tempor libero, ut accumsan dui dui id orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et libero nec eros pulvinar ornare sed vel felis. Donec volutpat magna tristique sem blandit, quis rhoncus velit tristique. Aliquam nisl augue, tristique non odio condimentum, ullamcorper gravida ligula. Morbi arcu sapien, ullamcorper id turpis eu, sagittis auctor mi. Mauris non venenatis ipsum. Maecenas interdum lorem sit amet turpis rhoncus, a dictum orci euismod. Vivamus sed massa lectus. Fusce nec enim nec orci fermentum molestie.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat, risus in ultricies convallis, metus massa tempor libero, ut accumsan dui dui id orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et libero nec eros pulvinar ornare sed vel felis. Donec volutpat magna tristique sem blandit, quis rhoncus velit tristique. Aliquam nisl augue, tristique non odio condimentum, ullamcorper gravida ligula. Morbi arcu sapien, ullamcorper id turpis eu, sagittis auctor mi. Mauris non venenatis ipsum. Maecenas interdum lorem sit amet turpis rhoncus, a dictum orci euismod. Vivamus sed massa lectus. Fusce nec enim nec orci fermentum molestie.</p>
-    </section>
-    
+    <% } %> 
 
     <section class="horizontal-section">
       <div class="sticky-wrapper"> 
@@ -42,7 +35,7 @@
 
     <figure id="public-art-list">
       <figcaption class="body-text">Public art:</figcaption>
-      <ol class="body-text">
+      <ol>
         <li>"Migration Stage" by Buster&nbsp;Simpson</li>
         <li>"Joshua Green Fountain" by George&nbsp;Tsutakawa</li>    
         <li>"Honoring Our Muckleshoot Warriors" by Tyson Simmons, Keith&nbsp;Stevenson</li>
@@ -57,16 +50,9 @@
         <li>"Guests" by Ann&nbsp;Hamilton *</li>
     </ol>
   </figure>
-    
-    <section class="article-content" style="margin:20%; margin-bottom:5%; margin-top:5%">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat, risus in ultricies convallis, metus massa tempor libero, ut accumsan dui dui id orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et libero nec eros pulvinar ornare sed vel felis. Donec volutpat magna tristique sem blandit, quis rhoncus velit tristique. Aliquam nisl augue, tristique non odio condimentum, ullamcorper gravida ligula. Morbi arcu sapien, ullamcorper id turpis eu, sagittis auctor mi. Mauris non venenatis ipsum. Maecenas interdum lorem sit amet turpis rhoncus, a dictum orci euismod. Vivamus sed massa lectus. Fusce nec enim nec orci fermentum molestie.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consequat, risus in ultricies convallis, metus massa tempor libero, ut accumsan dui dui id orci. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et libero nec eros pulvinar ornare sed vel felis. Donec volutpat magna tristique sem blandit, quis rhoncus velit tristique. Aliquam nisl augue, tristique non odio condimentum, ullamcorper gravida ligula. Morbi arcu sapien, ullamcorper id turpis eu, sagittis auctor mi. Mauris non venenatis ipsum. Maecenas interdum lorem sit amet turpis rhoncus, a dictum orci euismod. Vivamus sed massa lectus. Fusce nec enim nec orci fermentum molestie.</p>
-    </section>
 
     </div>
-    <side-chain>
-      <!-- content goes here -->
-    </side-chain>
+
     <script src="app.js" async></script>
     <% if (json.project.production) { %>
     <%= !json.project.embedded ? t.include("partials/_analytics.html") : "" %>

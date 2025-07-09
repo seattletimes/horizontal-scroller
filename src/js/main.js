@@ -28,13 +28,13 @@ function horizontalScroller(){
   // Dynamically calculate scroll distance based on viewport width (smaller screen width means you have to scroll more to see whole graphic. Must subtract windowWidth, otherwise the graphic will scroll all the way off the page and you'll see white. We want to stop when right edge of graphic reaches right edge of viewport.)
   let scrollLength = (horizontalLength *1.05) - windowWidth // length of graphic
   let scrollDistance = distFromTop +  scrollLength; // length from top + graphic 
-  let scrollHeight = scrollLength +window.innerHeight;
+  let scrollHeight = scrollLength + window.innerHeight;
 
   horizontalSection.style.height = scrollHeight  +  "px" 
 
   window.onscroll = function(){
-  let scrollTop = window.pageYOffset
-  let graphicScroller = document.querySelector(".graphic-wrapper")
+  let scrollTop = window.scrollY;
+  let graphicScroller = document.querySelector(".graphic-wrapper");
 
     // As soon as we have scrolled down (scrollTop) to where the graphic is (distFromTop), start moving the graphic-wrapper left. Stop moving it left once we have reached the end of the graphic (ie the end of scrolldistance)
   if (scrollTop < distFromTop) {
