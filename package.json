@@ -8,7 +8,7 @@
     "url": "https://github.com/seattletimes/horizontal-scroller.git"
   },
   "dependencies": {
-    "@aws-sdk/client-s3": "^3.842.0",
+    "@aws-sdk/client-s3": "^3.844.0",
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.14.2",
     "@nprapps/sidechain": "^1.1.4",
